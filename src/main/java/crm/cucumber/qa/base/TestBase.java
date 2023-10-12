@@ -24,7 +24,7 @@ public class TestBase {
 
 	public TestBase() throws IOException {
 		prop = new Properties();
-		String filepath = "D:\\Automation Testing\\CucumberProject\\src\\main\\java\\crm\\cucumber\\qa\\config\\config.properties";
+		String filepath = "D:\\My Workspace\\NewCopyOfProject\\FreeCrmCucumber\\FreeCrm.com\\src\\main\\java\\crm\\cucumber\\qa\\config\\config.properties";
 		FileInputStream fis = new FileInputStream(filepath);
 		prop.load(fis);
 	}
@@ -33,7 +33,7 @@ public class TestBase {
 
 		String browserName = prop.getProperty("browser");
 		if (browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver","D:\\Automation Testing\\FreeCRM.com\\drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","D:\\My Workspace\\NewCopyOfProject\\FreeCrmCucumber\\FreeCrm.com\\drivers\\chromedriver.exe");
 			//WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("firefox")) {
